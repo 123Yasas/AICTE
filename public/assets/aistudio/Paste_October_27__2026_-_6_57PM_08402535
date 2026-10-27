@@ -1,0 +1,1319 @@
+# PROJECT TITLE
+
+AICTE SmartVerify AI — Intelligent Application Validation, Document Authentication & Regulatory Compliance Platform
+
+## 1. PROJECT OBJECTIVE
+
+Build a complete, modern, advanced, attractive, responsive, and interactive AI-powered website for the All India Council for Technical Education (AICTE).
+
+The platform should help AICTE officials and technical institutions validate applications, inspect supporting documents, detect potential document anomalies, verify documents through authorized sources, check regulatory compliance, identify infrastructure deficiencies, and generate transparent validation reports.
+
+The platform must function as a working prototype, not merely a static UI design.
+
+Create realistic interactions, functional buttons, forms, upload workflows, dashboards, tables, notifications, filters, search, charts, and navigation.
+
+Use synthetic demonstration data wherever actual AICTE data or authorized external verification services are unavailable.
+
+IMPORTANT: The system is an AI-assisted decision-support platform. It must never automatically declare a document fraudulent or reject an institution solely because of an AI-generated flag. All adverse findings must be reviewed by authorized officials.
+
+---
+
+## 2. DESIGN AND VISUAL THEME
+
+Create an exceptionally attractive, colourful, professional, and futuristic government-tech website.
+
+### Colour palette
+
+* Primary colour: Light blue (#64B5F6)
+* Secondary colour: Sky blue (#29B6F6)
+* Background: Very light blue (#F4F9FF)
+* Card background: White (#FFFFFF)
+* Primary text: Dark navy (#183153)
+* Secondary text: Slate blue (#64748B)
+* Success: Soft green (#22C55E)
+* Warning: Amber (#F59E0B)
+* Error: Coral red (#EF4444)
+* Accent: Soft purple (#A78BFA)
+* Additional accent: Turquoise (#2DD4BF)
+
+Use light-blue gradients sparingly for hero sections, primary buttons, and important highlights.
+
+The website should look premium, clean, modern, trustworthy, and suitable for a national-level regulatory platform.
+
+### UI design requirements
+
+* Rounded cards with 16–22px border radius.
+* Soft shadows and subtle borders.
+* Interactive cards that lift slightly on hover.
+* Smooth page transitions.
+* Animated counters on dashboard statistics.
+* Animated progress bars.
+* Attractive charts with tooltips.
+* Beautiful empty states and loading skeletons.
+* Modern icons using Lucide React.
+* Smooth dropdown menus.
+* Collapsible sidebar navigation.
+* Responsive tables.
+* Attractive modal dialogs.
+* Toast notifications after actions.
+* Confirmation dialogs for important actions.
+* Searchable dropdowns.
+* Light-blue active navigation indicators.
+* Floating action buttons where appropriate.
+* Micro-animations on buttons and interactive components.
+
+Use a consistent spacing system and professional typography such as Inter.
+
+Avoid an overly dark interface. The default theme must be LIGHT MODE with a light-blue colour scheme.
+
+The layout must adapt perfectly to desktop, tablet, and mobile screens.
+
+---
+
+## 3. TECHNOLOGY STACK
+
+Use the following technologies:
+
+Frontend:
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* shadcn/ui
+* Lucide React
+* Framer Motion
+* Recharts
+* React Router
+* React Hook Form
+* Zod validation
+
+Backend:
+
+* Python FastAPI
+* REST APIs
+* Pydantic
+
+Database:
+
+* PostgreSQL for institutions, applications, users, validation results, audit records, and verification statuses.
+
+Document processing:
+
+* PyMuPDF for PDF processing.
+* Tesseract OCR or PaddleOCR for extracting text.
+* OpenCV for image analysis.
+* Python-based validation rules engine.
+
+Authentication:
+
+* Role-based authentication.
+* Secure password hashing.
+* Protected routes.
+* Session or token-based authentication.
+
+Development requirements:
+
+* Create reusable components.
+* Use a clean folder structure.
+* Separate frontend and backend logic.
+* Use environment variables for configuration.
+* Include meaningful error handling.
+* Implement loading and empty states.
+* Provide sample data for demonstrations.
+* Include clear instructions to run the project locally.
+
+If the complete backend cannot be configured immediately, implement a functional frontend with a mock API service layer that can later be replaced by real backend APIs.
+
+Do not expose API keys or credentials in frontend code.
+
+---
+
+## 4. LANDING PAGE
+
+Create a visually impressive landing page.
+
+### Navigation bar
+
+Include:
+
+* AICTE SmartVerify AI logo.
+* Home.
+* Features.
+* How It Works.
+* Compliance.
+* About.
+* Login.
+* Get Started.
+
+### Hero section
+
+Main heading:
+
+"Smarter Validation. Trusted Verification. Transparent Compliance."
+
+Subheading:
+
+"An AI-powered platform that helps technical institutions and regulatory officials validate applications, authenticate documents, identify discrepancies, and streamline compliance review."
+
+Add two buttons:
+
+1. Launch Dashboard
+2. Explore Features
+
+Add a visually attractive illustration of an AI-powered document verification system with floating document cards, verification checkmarks, connected data nodes, and animated scanning effects.
+
+Do not use official AICTE logos unless provided or authorized. Use a custom SmartVerify AI logo for the prototype.
+
+### Statistics section
+
+Show illustrative demonstration metrics:
+
+* Applications Processed.
+* Documents Analysed.
+* Verification Checks Completed.
+* Applications Awaiting Review.
+
+Label these figures as demo statistics and calculate them from the application's demonstration dataset.
+
+### Features section
+
+Display colourful feature cards for:
+
+* AI Document Validation.
+* OCR Data Extraction.
+* Document Authenticity Verification.
+* Anomaly Detection.
+* Regulatory Compliance.
+* Infrastructure Evidence Review.
+* Smart Deficiency Reports.
+* Audit Trail and Transparency.
+
+### How it works
+
+Display a six-step horizontal workflow:
+
+1. Submit Application.
+2. Upload Documents.
+3. Extract Information.
+4. Validate and Verify.
+5. Generate Findings.
+6. Official Review.
+
+Use connecting lines, icons, animated progress indicators, and responsive cards.
+
+---
+
+## 5. AUTHENTICATION AND USER ROLES
+
+Create a polished login and registration interface.
+
+Support three roles:
+
+### A. Institution / College User
+
+Can:
+
+* Register an institution in the demo environment.
+* Create an application.
+* Upload documents.
+* View application status.
+* Review identified deficiencies.
+* Correct information.
+* Upload replacement documents.
+* Resubmit applications where permitted.
+* Download validation reports.
+* Track verification progress.
+
+### B. AICTE Reviewing Officer
+
+Can:
+
+* View assigned applications.
+* Review extracted information.
+* Inspect document-level findings.
+* Compare submitted details with institutional records.
+* View compliance results.
+* Request corrections.
+* Record observations.
+* Mark a finding as confirmed, dismissed, or requiring further investigation.
+* Forward cases for additional scrutiny or inspection.
+* View the complete audit history.
+
+### C. Administrator
+
+Can:
+
+* Manage users and roles.
+* Manage institutions.
+* Configure application categories.
+* Configure validation rules.
+* Manage document checklists.
+* Review system activity.
+* View platform analytics.
+* Manage demonstration verification sources.
+* Configure alert settings.
+
+Implement role-based access to pages, data, and actions.
+
+For demonstration purposes, include a clearly labelled demo-login mode with sample accounts. Do not use hardcoded production credentials.
+
+---
+
+## 6. MAIN APPLICATION DASHBOARD
+
+After login, show an advanced, attractive dashboard.
+
+### Sidebar navigation
+
+Include:
+
+* Dashboard.
+* Applications.
+* Document Validation.
+* Document Verification.
+* Compliance Checker.
+* Infrastructure Review.
+* Deficiency Management.
+* Reports.
+* Notifications.
+* Audit Trail.
+* Regulatory Rules.
+* User Management.
+* Settings.
+
+Show the appropriate menu items according to the logged-in user's role.
+
+### Top navigation
+
+Include:
+
+* Global search.
+* Notification bell.
+* Help icon.
+* User profile dropdown.
+* Current date.
+* Breadcrumb navigation.
+
+### Dashboard statistic cards
+
+Create six colourful, interactive cards:
+
+1. Total Applications.
+2. Validation Completed.
+3. Applications Requiring Correction.
+4. Verification Pending.
+5. Anomalies Flagged.
+6. Manual Review Required.
+
+Each card should display:
+
+* Large numerical value.
+* Label.
+* Relevant icon.
+* Small trend indicator.
+* Optional comparison with the previous period.
+* Click action to open the corresponding filtered application list.
+
+Use real values from the demo dataset rather than unrelated hardcoded numbers.
+
+### Dashboard charts
+
+Create:
+
+* Application status distribution using a donut chart.
+* Applications received over time using an area chart.
+* Document verification outcomes using a bar chart.
+* Deficiencies by category using a horizontal bar chart.
+* Application processing progress.
+* Recent validation activity timeline.
+
+All charts must have tooltips, legends, responsive sizing, and meaningful demo data.
+
+### Recent applications table
+
+Columns:
+
+* Application ID.
+* Institution Name.
+* Application Category.
+* Submission Date.
+* Documents Submitted.
+* Validation Status.
+* Verification Status.
+* Compliance Status.
+* Assigned Officer.
+* Actions.
+
+Include:
+
+* Search.
+* Sorting.
+* Pagination.
+* Filters.
+* Status badges.
+* View Details button.
+* Download Report button.
+
+Clicking an application must open its complete application details page.
+
+---
+
+## 7. APPLICATION MANAGEMENT MODULE
+
+Create a complete application management workflow.
+
+### Application categories
+
+Allow the user to select an applicable category from a configurable list, such as:
+
+* Extension of Approval.
+* Approval-related changes.
+* Institution information updates.
+* Programme or course-related changes.
+* Other configured application categories.
+
+The categories and requirements must be configurable rather than assumed to be a complete or current list of official AICTE categories.
+
+### Application form
+
+Include relevant fields such as:
+
+* Institution name.
+* Institution ID.
+* Application ID.
+* Institution address.
+* State and district.
+* Application category.
+* Academic year.
+* Approved programmes.
+* Course and intake information.
+* Faculty information.
+* Accreditation details.
+* Affiliation or permission details, where applicable.
+* Previous approval details.
+* Contact information.
+
+Validate the form and display clear error messages.
+
+Use conditional form fields based on the selected application category.
+
+### Application workflow
+
+Create a step-by-step wizard:
+
+Step 1: Institution Information.
+
+Step 2: Application Details.
+
+Step 3: Document Upload.
+
+Step 4: Preliminary Validation.
+
+Step 5: Review and Submit.
+
+Display a progress indicator and allow users to return to earlier steps without losing entered data.
+
+Show a confirmation screen after successful submission.
+
+---
+
+## 8. DOCUMENT UPLOAD AND MANAGEMENT
+
+Build a fully interactive document upload interface.
+
+Support:
+
+* PDF.
+* JPG.
+* JPEG.
+* PNG.
+
+Include:
+
+* Drag-and-drop upload.
+* Browse Files button.
+* File preview.
+* File size display.
+* Upload progress.
+* Upload success and error states.
+* Remove and replace actions.
+* Document category selection.
+* Multiple file upload.
+* Search and filtering.
+* Download uploaded documents.
+
+Display each uploaded document as a beautiful card containing:
+
+* Document name.
+* Document type.
+* Upload date.
+* File size.
+* Processing status.
+* OCR status.
+* Expiry status, if applicable.
+* Verification status.
+* View and download buttons.
+
+Use a configurable checklist to identify mandatory documents for the selected application category.
+
+Clearly indicate:
+
+* Required and missing documents.
+* Uploaded documents.
+* Documents being processed.
+* Expired documents.
+* Documents requiring correction.
+* Documents awaiting verification.
+
+Do not treat every missing signature, stamp, or field as an error unless the applicable configured rules require it.
+
+---
+
+## 9. AI-POWERED OCR AND DATA EXTRACTION
+
+Create a document processing module.
+
+The system should:
+
+1. Accept an uploaded PDF or image.
+2. Identify the document type.
+3. Extract relevant text using OCR.
+4. Identify structured fields.
+5. Display extracted information.
+6. Allow users to review and correct extraction mistakes.
+7. Compare extracted values against application fields.
+8. Save the extraction result and validation history.
+
+Example extracted fields:
+
+* Institution name.
+* Certificate number.
+* Registration number.
+* Issue date.
+* Expiry date.
+* Address.
+* Issuing authority.
+* Accreditation identifier.
+* Faculty identifiers, where appropriate.
+* Relevant reference numbers.
+
+Display the original document next to the extracted fields.
+
+Highlight text fields that need attention.
+
+Include confidence indicators for OCR extraction.
+
+Clearly distinguish OCR confidence from the confidence of any authenticity or compliance assessment.
+
+When OCR cannot reliably extract a field, show "Needs Manual Review" rather than inventing a value.
+
+Use actual OCR processing when available. If it is not configured, use explicitly labelled synthetic demo extraction results.
+
+---
+
+## 10. INTELLIGENT VALIDATION ENGINE
+
+Build a rule-based validation engine that can be combined with AI extraction.
+
+Implement the following checks:
+
+### Completeness validation
+
+* Missing mandatory documents.
+* Missing mandatory fields.
+* Incomplete document submissions.
+* Missing required supporting evidence.
+
+### Expiry validation
+
+* Expired certificates.
+* Expired permits or permissions.
+* Documents nearing expiry, based on configurable rules.
+* Invalid or unreadable dates.
+
+### Consistency validation
+
+* Institution name mismatch.
+* Registration number mismatch.
+* Address mismatch.
+* Inconsistent dates.
+* Conflicting certificate numbers.
+* Inconsistent course and intake details.
+* Differences between application information and authorized institutional records.
+
+### Historical validation
+
+Where authorized records are available, compare:
+
+* Previous approval status.
+* Approved programmes and intake.
+* Historical deficiency records.
+* Application history.
+* Relevant institutional details.
+
+### Validation results
+
+For every finding, show:
+
+* Finding ID.
+* Application ID.
+* Document name.
+* Page number or field.
+* Extracted value.
+* Comparison value.
+* Rule applied.
+* Explanation.
+* Severity.
+* Evidence.
+* Recommended next action.
+* Review status.
+
+Possible statuses:
+
+* Passed.
+* Attention Required.
+* Failed Rule Check.
+* Pending.
+* Manual Review Required.
+
+A failed rule check means that a configured validation condition was not met. It must not automatically mean fraud or regulatory rejection.
+
+---
+
+## 11. DOCUMENT ANOMALY AND POTENTIAL FORGERY DETECTION
+
+Create a separate document anomaly detection module.
+
+Analyse supported documents for indicators such as:
+
+* Duplicate document uploads.
+* Repeated document hashes.
+* Suspicious metadata.
+* Unusual modification history.
+* Conflicting dates.
+* Mismatched identifiers.
+* Inconsistent extracted text.
+* Potentially altered image regions.
+* Suspicious visual differences in text, fonts, or backgrounds where technically feasible.
+* Differences between a submitted document and an authenticated reference copy, when available.
+
+Use appropriate techniques:
+
+* File hashing.
+* PDF metadata inspection.
+* Image comparison.
+* OCR comparison.
+* OpenCV image analysis.
+* Cross-document comparison.
+
+### Anomaly report interface
+
+For every anomaly, show:
+
+* Anomaly category.
+* Document name.
+* Page number or affected region.
+* Reason for the alert.
+* Relevant evidence.
+* Detection method.
+* Confidence or uncertainty indicator.
+* Suggested next step.
+* Officer review status.
+
+Use colour-coded indicators:
+
+* Low concern.
+* Needs Attention.
+* High-Priority Review.
+
+Do not label a document "Forged" solely because of a model prediction or metadata discrepancy.
+
+Use the wording "Potential Anomaly Detected — Verification Required."
+
+---
+
+## 12. DOCUMENT AUTHENTICATION MODULE
+
+Build a dedicated verification centre.
+
+Allow verification through supported methods:
+
+* QR code.
+* Digital signature.
+* Official issuing-authority API.
+* Official verification portal.
+* Unique certificate or reference number.
+* Authorized digital repository.
+* Manual confirmation by an authorized reviewer.
+
+### Verification workflow
+
+Step 1: Select a document.
+
+Step 2: Identify the issuing authority.
+
+Step 3: Select an available verification method.
+
+Step 4: Submit the relevant reference information.
+
+Step 5: Retrieve the response from the configured authorized source.
+
+Step 6: Compare the returned details against the uploaded document.
+
+Step 7: Store the result, timestamp, source, and evidence.
+
+### Verification statuses
+
+Use these statuses:
+
+* Verified.
+* Mismatch Detected.
+* Expired.
+* Verification Pending.
+* Source Unavailable.
+* Manual Review Required.
+* Not Yet Checked.
+
+Display:
+
+* Issuing authority.
+* Reference number.
+* Verification timestamp.
+* Source response.
+* Compared fields.
+* Differences detected.
+* Evidence or response reference.
+* Next action.
+
+Use mock verification adapters for the prototype when real official APIs are unavailable.
+
+Clearly label simulated results as "DEMO VERIFICATION — NOT AN OFFICIAL CONFIRMATION."
+
+Never claim that a document has been officially verified unless the configured authorized source actually confirms it.
+
+Do not bypass CAPTCHA, authentication, rate limits, or access controls on official websites.
+
+---
+
+## 13. REGULATORY COMPLIANCE CHECKER
+
+Create a configurable compliance checking interface.
+
+The platform must compare application details and documents against applicable rules derived from authorized AICTE handbooks, regulations, and administrative instructions.
+
+Do not invent official regulatory requirements.
+
+If the current applicable requirements have not been supplied or authenticated, label them as demonstration rules pending official configuration.
+
+### Compliance categories
+
+Include configurable categories such as:
+
+* Institution eligibility.
+* Approval and application requirements.
+* Accreditation and certification.
+* Faculty-related requirements.
+* Programme and course information.
+* Approved intake.
+* Required permissions and NOCs.
+* Supporting documents.
+* Institutional records.
+* Infrastructure evidence.
+* Other applicable requirements.
+
+### Compliance checklist interface
+
+Display a table with:
+
+* Rule ID.
+* Compliance category.
+* Requirement description.
+* Required evidence.
+* Submitted evidence.
+* Validation outcome.
+* Evidence link.
+* Reviewer comment.
+* Recommended action.
+
+Possible outcomes:
+
+* Meets Configured Rule.
+* Potential Gap Identified.
+* Insufficient Evidence.
+* Verification Pending.
+* Not Applicable.
+* Manual Review Required.
+
+Allow authorized administrators to:
+
+* Add rules.
+* Edit rules.
+* Set applicability conditions.
+* Define required evidence.
+* Configure expiry rules.
+* Define review requirements.
+* Enable or disable rules.
+* Version rules.
+* Record the source document and effective date.
+
+Record the exact rule version applied to each validation.
+
+Include a compliance summary showing passed checks, potential gaps, pending checks, and items requiring official review.
+
+---
+
+## 14. INFRASTRUCTURE EVIDENCE REVIEW
+
+Create a visually impressive infrastructure review module.
+
+Allow institutions to upload:
+
+* Classroom photographs.
+* Laboratory photographs.
+* Library photographs.
+* Workshop photographs.
+* Floor plans.
+* Infrastructure certificates.
+* Other relevant evidence.
+
+### Computer vision assistance
+
+Where suitable models are available, use computer vision to help:
+
+* Classify the type of uploaded image.
+* Identify potentially relevant visible objects.
+* Compare evidence with configured checklist requirements.
+* Detect duplicate images.
+* Flag visually inconsistent submissions.
+* Identify poor-quality or unreadable photographs.
+* Highlight images that need further review.
+
+Do not claim that an image proves the actual physical existence, current condition, dimensions, capacity, or regulatory compliance of a facility.
+
+Distinguish between image observations and facts requiring independent verification.
+
+### Infrastructure review interface
+
+Display:
+
+* Image preview.
+* Uploaded file information.
+* Detected image category.
+* AI-generated observations.
+* Applicable configured rule.
+* Potential discrepancies.
+* Evidence quality.
+* Reviewer comments.
+* Inspection recommendation.
+* Review status.
+
+Provide actions:
+
+* Accept as supporting evidence.
+* Request additional evidence.
+* Flag for manual review.
+* Recommend physical inspection.
+
+These actions must not independently determine the final regulatory outcome.
+
+---
+
+## 15. SMART DEFICIENCY MANAGEMENT
+
+Build an intelligent deficiency tracking system.
+
+When validation identifies issues, generate a structured deficiency list.
+
+For every deficiency, show:
+
+* Deficiency ID.
+* Application ID.
+* Category.
+* Description.
+* Evidence.
+* Applicable rule.
+* Required correction.
+* Responsible party.
+* Date identified.
+* Current status.
+* Reviewer comments.
+
+### Deficiency statuses
+
+* Open.
+* Correction Submitted.
+* Under Review.
+* Resolved.
+* Not Resolved.
+* Escalated.
+* Closed by Authorized Reviewer.
+
+### Features
+
+* Automatic deficiency report generation.
+* Downloadable PDF reports.
+* Correction instructions.
+* Document replacement.
+* Resubmission tracking.
+* Revalidation after correction.
+* Due-date tracking where applicable.
+* Notifications.
+* Complete history of changes.
+
+Allow the institution to see only its own authorized application information.
+
+Generate correction instructions based on actual findings, without inventing missing facts or regulatory requirements.
+
+---
+
+## 16. APPLICATION REVIEW WORKSPACE
+
+Create a dedicated workspace for AICTE reviewing officers.
+
+Use a split-screen layout.
+
+LEFT PANEL:
+
+* Application details.
+* Uploaded document list.
+* Document previews.
+* Page navigation.
+* Extracted information.
+
+RIGHT PANEL:
+
+* AI validation results.
+* Consistency comparison.
+* Verification outcomes.
+* Compliance checklist.
+* Anomaly findings.
+* Reviewer comments.
+* Audit timeline.
+
+Include a document viewer with:
+
+* Zoom controls.
+* Page navigation.
+* Search within extracted text.
+* Highlighted relevant text.
+* Anomaly region overlays where supported.
+* Download controls.
+
+### Officer actions
+
+Provide:
+
+* Mark Finding as Reviewed.
+* Confirm Discrepancy.
+* Dismiss Flag with Reason.
+* Request Clarification.
+* Request Additional Evidence.
+* Assign to Another Reviewer.
+* Recommend Further Verification.
+* Recommend Physical Inspection.
+* Add Official Observation.
+
+All actions must require appropriate authorization and be recorded in the audit log.
+
+Final approval, rejection, statutory scrutiny, and mandatory inspections remain with the competent AICTE authorities.
+
+Do not create an automatic AI approval or rejection mechanism.
+
+---
+
+## 17. NOTIFICATIONS AND ALERTS
+
+Build an interactive notification centre.
+
+Generate alerts for:
+
+* Missing documents.
+* Expired documents.
+* OCR extraction failures.
+* Cross-document mismatches.
+* Pending external verification.
+* Source unavailability.
+* Potential anomalies.
+* Compliance gaps.
+* New correction requests.
+* Resubmitted documents.
+* Pending reviewer actions.
+
+Include:
+
+* Notification bell.
+* Unread count.
+* Notification dropdown.
+* Full notification page.
+* Mark as read.
+* Filter by category.
+* Filter by severity.
+* Link to the relevant application.
+* Notification preferences.
+
+Use toast notifications after successful operations.
+
+Make notifications role-aware so users receive only relevant alerts.
+
+For the prototype, implement simulated notifications using application events or a local notification service.
+
+---
+
+## 18. REPORTS AND ANALYTICS
+
+Create an advanced reports page.
+
+Include:
+
+* Application summary.
+* Document validation summary.
+* Document verification report.
+* Compliance summary.
+* Anomaly analysis.
+* Deficiency report.
+* Processing time analysis.
+* Pending review report.
+* Historical application trends.
+
+Provide filters for:
+
+* Date range.
+* Application category.
+* Institution.
+* Validation status.
+* Verification status.
+* Compliance status.
+* Assigned officer.
+
+Allow report exports in:
+
+* PDF.
+* CSV.
+
+Generate reports from actual prototype data.
+
+Every report should include:
+
+* Report generation date.
+* Application ID.
+* Rule versions.
+* Validation outcomes.
+* Supporting evidence references.
+* Verification source information.
+* Pending actions.
+* Disclaimer about AI-assisted findings.
+
+---
+
+## 19. AUDIT TRAIL AND TRANSPARENCY
+
+Create a dedicated audit history page.
+
+Record:
+
+* User login and relevant security events.
+* Application creation.
+* Document upload and replacement.
+* OCR processing.
+* Validation rule execution.
+* Rule version.
+* External source verification requests.
+* External source responses.
+* AI-generated findings.
+* Reviewer decisions.
+* Corrections and resubmissions.
+* Report generation.
+* Changes to compliance rules.
+
+Display:
+
+* Timestamp.
+* User or system actor.
+* Action performed.
+* Application ID.
+* Relevant object.
+* Previous value, where appropriate.
+* New value, where appropriate.
+* Source or evidence reference.
+* Outcome.
+
+Use an attractive timeline interface.
+
+Audit records should be protected against unauthorized alteration. Do not store sensitive document contents unnecessarily in the audit log.
+
+---
+
+## 20. ADMINISTRATION AND RULE CONFIGURATION
+
+Create an administrator settings area.
+
+Include:
+
+* User management.
+* Role management.
+* Institution management.
+* Application category configuration.
+* Document checklist configuration.
+* Compliance rule management.
+* Verification source configuration.
+* Alert preferences.
+* File retention settings.
+* Audit log access.
+* System health information.
+
+For each rule, support:
+
+* Rule ID.
+* Rule name.
+* Description.
+* Applicable category.
+* Validation logic.
+* Required evidence.
+* Severity.
+* Effective date.
+* Expiry date, where applicable.
+* Rule source.
+* Version.
+* Active or inactive status.
+
+Require appropriate authorization for changes.
+
+Keep a history of regulatory rule changes.
+
+Never silently change the rules used to evaluate an existing application.
+
+---
+
+## 21. SECURITY AND PRIVACY
+
+Implement the following safeguards:
+
+* Role-based access control.
+* Protected API endpoints.
+* Password hashing.
+* Input validation.
+* Secure file upload validation.
+* File size limits.
+* File type verification.
+* Protection against path traversal.
+* Safe document processing.
+* Rate limiting where appropriate.
+* Secure session handling.
+* Environment-based secrets.
+* Audit logging.
+* Data minimization.
+* Configurable retention policies.
+* Access restrictions for institution records.
+* Appropriate handling of personal and institutional data.
+
+Use synthetic or anonymized data for the prototype.
+
+Do not expose one institution's confidential documents to another institution.
+
+Do not embed sensitive information in URLs or frontend logs.
+
+---
+
+## 22. FUNCTIONAL REQUIREMENTS
+
+The website must not be a collection of non-functional buttons.
+
+Implement working interactions for:
+
+* Navigation.
+* Login and logout.
+* Role-based page access.
+* Application creation.
+* Form validation.
+* Document uploads.
+* Document previews.
+* OCR processing where configured.
+* Synthetic demo processing where OCR is unavailable.
+* Rule execution.
+* Validation report generation.
+* Search and filters.
+* Application status changes.
+* Deficiency creation.
+* Correction and resubmission.
+* Verification workflow.
+* Compliance checks.
+* Reviewer comments.
+* Notifications.
+* Audit history.
+* PDF and CSV export.
+* Rule configuration.
+
+Use persistent database storage where the backend is implemented.
+
+If a feature requires a third-party service or official API that is not available, provide a clearly labelled demo implementation rather than pretending that the integration is real.
+
+Display appropriate loading states, success messages, validation errors, and failure states.
+
+---
+
+## 23. SAMPLE DEMONSTRATION DATA
+
+Create realistic synthetic records for at least 10 applications.
+
+Use fictional institution names and synthetic identifiers.
+
+Example applications:
+
+APP-2026-001:
+
+* Institution: Greenfield Institute of Technology.
+* Category: Extension of Approval.
+* Status: Preliminary Checks Complete.
+* Finding: All configured mandatory documents present.
+* Verification: Some source checks pending.
+
+APP-2026-002:
+
+* Institution: Sunrise College of Engineering.
+* Category: Approval-related Change.
+* Status: Attention Required.
+* Finding: One certificate appears expired according to its extracted expiry date.
+
+APP-2026-003:
+
+* Institution: Blue Horizon Technical Institute.
+* Category: Extension of Approval.
+* Status: Manual Review Required.
+* Finding: Institution name differs between two submitted documents.
+
+APP-2026-004:
+
+* Institution: Riverstone Institute of Technology.
+* Category: Extension of Approval.
+* Status: Verification Pending.
+* Finding: Issuing-authority confirmation has not been received.
+
+APP-2026-005:
+
+* Institution: FutureTech Engineering College.
+* Category: Programme-related Change.
+* Status: Additional Evidence Required.
+* Finding: Supporting infrastructure evidence is incomplete according to the configured demo checklist.
+
+Generate additional synthetic applications to demonstrate:
+
+* Successful preliminary validation.
+* Missing documents.
+* Expired documents.
+* Duplicate files.
+* Potential metadata anomalies.
+* OCR failure.
+* Verification source unavailable.
+* Compliance gaps.
+* Resubmitted documents.
+* Resolved deficiencies.
+
+Use these as demonstration scenarios, not actual findings against real institutions.
+
+Make the dashboard statistics and charts derive from this dataset.
+
+---
+
+## 24. WEBSITE PAGE STRUCTURE
+
+Create the following pages:
+
+1. Landing Page.
+2. Login Page.
+3. Registration Page.
+4. Institution Dashboard.
+5. AICTE Officer Dashboard.
+6. Administrator Dashboard.
+7. Applications List.
+8. Create Application Wizard.
+9. Application Details.
+10. Document Upload Centre.
+11. OCR Extraction Workspace.
+12. Document Validation Results.
+13. Anomaly Detection Centre.
+14. Document Authentication Centre.
+15. Regulatory Compliance Checker.
+16. Infrastructure Evidence Review.
+17. Deficiency Management.
+18. Officer Review Workspace.
+19. Notifications Centre.
+20. Reports and Analytics.
+21. Audit Trail.
+22. Regulatory Rule Configuration.
+23. User Management.
+24. Settings and Profile.
+
+Ensure all pages are connected through React Router and consistent navigation.
+
+---
+
+## 25. FINAL UI QUALITY REQUIREMENTS
+
+The final website must look like a premium AI-powered regulatory SaaS platform.
+
+Prioritize:
+
+* Attractive light-blue and white theme.
+* Colourful dashboard cards.
+* Beautiful charts.
+* Responsive layouts.
+* Smooth transitions.
+* Interactive document cards.
+* Clear status badges.
+* Advanced filtering.
+* Clean typography.
+* Consistent icons.
+* Well-designed forms.
+* Visually rich application details.
+* A polished document review workspace.
+* Useful empty states.
+* Realistic loading animations.
+
+Avoid:
+
+* Plain HTML-only interfaces.
+* Excessive blank space.
+* Too many unrelated gradients.
+* Oversized text everywhere.
+* Unnecessary 3D illustrations.
+* Broken navigation.
+* Fake buttons.
+* Hardcoded statistics unrelated to the data.
+* Generic template designs.
+* Dark-only themes.
+* Unexplained AI predictions.
+* Claims of real AICTE integration without authorization.
+
+---
+
+## 26. DEVELOPMENT INSTRUCTIONS
+
+First, build the complete frontend with all pages, reusable components, routing, responsive styling, sample data, and interactive workflows.
+
+Then implement the backend APIs, database schema, authentication, document-processing pipeline, validation engine, audit logging, and report generation.
+
+Create a clean and maintainable project structure.
+
+Ensure the application runs without compilation errors.
+
+Test the primary workflows:
+
+1. Log in as a college user.
+2. Create an application.
+3. Upload synthetic documents.
+4. Run preliminary validation.
+5. View document extraction and validation results.
+6. Open the application as an AICTE reviewing officer.
+7. Review a flagged discrepancy.
+8. Request additional evidence.
+9. Upload a corrected document.
+10. Re-run validation.
+11. Generate a report.
+12. Inspect the audit trail.
+
+Provide a README with setup instructions, required dependencies, environment variables, demo access instructions, and steps to run the frontend and backend.
+
+Begin implementation immediately. Do not stop after creating a design plan. Build the actual working prototype, including all essential pages, components, sample data, and interactions.
+
+The final result should be a visually impressive, interactive, responsive, light-blue-themed AICTE SmartVerify AI platform suitable for a hackathon demonstration.
