@@ -1,0 +1,8 @@
+{
+  "name": "AICTE SmartVerify AI",
+  "description": "Intelligent Application Validation, Document Authentication & Regulatory Compliance Platform for AICTE and technical institutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
